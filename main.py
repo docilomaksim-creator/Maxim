@@ -1,35 +1,35 @@
-class Pet:
+class Cat:
     def __init__(self, name):
         self.name = name
         self.hunger = 50
+        self.energy = 50
+        self.happiness = 50
 
     def eat(self):
-        self.hunger -= 10
+        self.hunger -= 20
         print(self.name, "поїв. Рівень голоду:", self.hunger)
 
+    def sleep(self):
+        self.energy += 30
+        print(self.name, "спить. Енергія:", self.energy)
+
     def play(self):
-        self.hunger += 10
-        print(self.name, "грається. Рівень голоду:", self.hunger)
+        self.energy -= 15
+        self.happiness += 20
+        print(self.name, "грається. Щастя:", self.happiness)
+
+    def status(self):
+        print("Кіт:", self.name)
+        print("Голод:", self.hunger)
+        print("Енергія:", self.energy)
+        print("Щастя:", self.happiness)
 
 
-class Human:
-    def __init__(self, name, pet):
-        self.name = name
-        self.pet = pet
+# симуляція життя котика
+cat1 = Cat("Барсик")
 
-    def feed_pet(self):
-        print(self.name, "годує", self.pet.name)
-        self.pet.eat()
-
-    def play_with_pet(self):
-        print(self.name, "грається з", self.pet.name)
-        self.pet.play()
-
-
-# створення об'єктів
-pet1 = Pet("Барсик")
-human1 = Human("Максим", pet1)
-
-# симуляція
-human1.feed_pet()
-human1.play_with_pet()
+cat1.status()
+cat1.eat()
+cat1.play()
+cat1.sleep()
+cat1.status()
