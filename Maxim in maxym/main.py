@@ -26,10 +26,8 @@ class Human:
         self.pet.play()
 
 
-# створення об'єктів
 pet1 = Pet("Барсик")
 human1 = Human("Максим", pet1)
 
-# симуляція
 human1.feed_pet()
 human1.play_with_pet()
