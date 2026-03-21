@@ -25,7 +25,6 @@ class Cat:
         print("Щастя:", self.happiness)
 
 
-# симуляція життя котика
 cat1 = Cat("Барсик")
 
 cat1.status()
